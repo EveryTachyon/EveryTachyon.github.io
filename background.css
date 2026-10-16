@@ -179,6 +179,27 @@ nav {
 
 .entry { border-bottom: 1px solid rgba(239, 244, 241, 0.28); }
 
+.featured-project-list {
+    width: min(760px, 100%);
+    margin-top: 20px;
+}
+
+.featured-project {
+    overflow: hidden;
+    border: 1px solid rgba(239, 244, 241, 0.3);
+    border-radius: 4px;
+    background: rgba(16, 25, 29, 0.48);
+}
+
+.featured-project summary { min-height: 90px; padding: 14px 18px; }
+
+.featured-project .entry-details {
+    max-width: none;
+    margin: 0 18px;
+    padding: 18px 0 22px;
+    border-top: 1px solid rgba(239, 244, 241, 0.2);
+}
+
 .entry summary {
     min-height: 76px;
     display: grid;
