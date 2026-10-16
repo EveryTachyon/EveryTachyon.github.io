@@ -1,0 +1,184 @@
+* { box-sizing: border-box; }
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #10191d;
+    background-image:
+        linear-gradient(180deg, rgba(9, 18, 22, 0.78), rgba(9, 18, 22, 0.86)),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=90");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #eff4f1;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+.page-shell {
+    width: min(1120px, calc(100% - 48px));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+}
+
+.topbar {
+    min-height: 78px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid rgba(239, 244, 241, 0.28);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    grid-column: 1;
+    justify-self: start;
+}
+
+.brand-image {
+    width: 48px;
+    height: 48px;
+    display: block;
+    border: 1px solid rgba(239, 244, 241, 0.4);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    grid-column: 3;
+    justify-self: end;
+    padding-left: 16px;
+    border-left: 1px solid rgba(239, 244, 241, 0.28);
+}
+
+.social-links a,
+nav a {
+    color: #d0dad6;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible,
+nav a:hover,
+nav a:focus-visible { color: #ffad8e; }
+
+.social-links a span { color: #ffad8e; }
+
+nav {
+    display: flex;
+    grid-column: 2;
+    justify-self: center;
+    gap: 20px;
+}
+
+.image-stage {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 80px;
+}
+
+.page-kicker {
+    margin: 0 0 16px;
+    color: #ffad8e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.page-title {
+    margin: 0 0 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.page-intro {
+    max-width: 520px;
+    margin: 0;
+    color: #d0dad6;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.creature-image {
+    width: min(680px, 84vw);
+    max-height: 80vh;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 42px rgba(0, 0, 0, 0.42));
+    animation: image-arrive 500ms ease-out both;
+}
+
+footer {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid rgba(239, 244, 241, 0.28);
+    color: #d0dad6;
+    font-size: 10px;
+}
+
+footer span { color: #ffad8e; }
+
+:focus-visible { outline: 2px solid #ffad8e; outline-offset: 4px; }
+
+@keyframes image-arrive {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .page-shell { width: calc(100% - 36px); }
+    .topbar { min-height: 70px; grid-template-columns: 1fr; gap: 10px; padding-block: 10px; }
+    .brand, nav, .social-links { grid-column: 1; }
+    nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .social-links a, nav a { font-size: 13px; }
+    .social-links { justify-self: end; gap: 12px; padding-left: 0; border-left: 0; }
+    .creature-image { width: min(560px, 88vw); max-height: 72vh; }
+    .page-content { padding-block: 60px; }
+    .page-title { font-size: 44px; }
+}
+
+@media (max-width: 380px) {
+    .page-shell { width: calc(100% - 28px); }
+    .brand { gap: 7px; font-size: 12px; }
+    .social-links { gap: 9px; }
+    .social-links a, nav a { font-size: 12px; }
+    nav { gap: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .creature-image { animation: none; }
+}
