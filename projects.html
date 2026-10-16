@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#10191d">
     <title>Projects | EveryTachyon</title>
     <link rel="stylesheet" href="background.css">
+    <script src="search.js" defer></script>
 </head>
 <body>
     <div class="page-shell">
@@ -28,9 +29,36 @@
             </div>
         </header>
         <main class="page-content">
-            <p class="page-kicker">01 / Portfolio</p>
+          
             <h1 class="page-title">Projects</h1>
-            <p class="page-intro">This page is ready for your project images and descriptions.</p>
+            <label class="search-box">
+                <span class="visually-hidden">Search projects</span>
+                <input type="search" data-search-input aria-controls="project-list" placeholder="Search projects" autocomplete="off">
+            </label>
+        
+            <div class="entry-list" id="project-list" data-search-list>
+                <p class="search-empty" data-empty-message="No matching projects found." aria-live="polite" hidden></p>
+                <details class="entry">
+                    <summary><span class="entry-number">01</span><span class="entry-name">MusicCafe</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details">
+                        <p>Androidi muusikarakendus, mis võimaldab kasutajatel muusikat toetatud allikatest alla laadida ja seda hiljem ilma internetiühenduseta kuulata.</p>
+                        <p class="project-tech-label">Tehnoloogiad</p>
+                        <div class="project-techs">
+                            <span>Kotlin</span><span>Jetpack Compose</span><span>Material 3</span><span>Android SDK</span><span>Gradle</span>
+                        </div>
+                        <a class="project-repo" href="https://github.com/EveryTachyon/MusicCafe" target="_blank" rel="noreferrer">Ava GitHubis <span aria-hidden="true">↗</span></a>
+                    </div>
+                </details>
+                <details class="entry">
+                    <summary><span class="entry-number">02</span><span class="entry-name">Evolutsiooniline Search</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details">
+                        <p>Pythoni programm, mis leiab evolutsioonilise algoritmi abil peidetud lause.</p>
+                        <p class="project-tech-label">Tehnoloogiad</p>
+                        <div class="project-techs"><span>Python</span></div>
+                        <a class="project-repo" href="https://github.com/EveryTachyon/Evolutionary-algorithm-for-randome-sentence" target="_blank" rel="noreferrer">Ava GitHubis <span aria-hidden="true">↗</span></a>
+                    </div>
+                </details>
+            </div>
         </main>
     </div>
 </body>

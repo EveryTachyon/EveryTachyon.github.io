@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#10191d">
     <title>Games | EveryTachyon</title>
     <link rel="stylesheet" href="background.css">
+    <script src="search.js" defer></script>
 </head>
 <body>
     <div class="page-shell">
@@ -28,9 +29,52 @@
             </div>
         </header>
         <main class="page-content">
-            <p class="page-kicker">02 / Play</p>
+        
             <h1 class="page-title">Games</h1>
-            <p class="page-intro">This page is ready for your game projects and related links.</p>
+           
+            <label class="search-box">
+                <span class="visually-hidden">Search games</span>
+                <input type="search" data-search-input aria-controls="game-list" placeholder="Search games" autocomplete="off">
+            </label>
+            <div class="entry-list game-list" id="game-list" data-search-list>
+                <p class="search-empty" data-empty-message="No matching games found." aria-live="polite" hidden></p>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">01</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">Uma Musume: Pretty Derby</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="Uma Musume: Pretty Derby image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">02</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">League of Legends</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="League of Legends image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">03</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">Minecraft</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="Minecraft image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">04</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">Goddess of Victory: NIKKE</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="Goddess of Victory: NIKKE image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">05</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">Honkai: Star Rail</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="Honkai: Star Rail image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">06</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">Wuthering Waves</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="Wuthering Waves image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">07</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">Zenless Zone Zero</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="Zenless Zone Zero image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">08</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">Genshin Impact</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="Genshin Impact image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+                <details class="entry game-entry">
+                    <summary><span class="entry-number">09</span><span class="game-art-placeholder" aria-hidden="true"></span><span class="entry-name">Arknights</span><span class="entry-icon" aria-hidden="true">+</span></summary>
+                    <div class="entry-details game-details"><div class="game-image-slot" role="img" aria-label="Arknights image slot"></div><p>Game image and details can go here.</p></div>
+                </details>
+            </div>
         </main>
     </div>
 </body>

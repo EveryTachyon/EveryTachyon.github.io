@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#10191d">
     <title>Anime | EveryTachyon</title>
     <link rel="stylesheet" href="background.css">
+    <script src="search.js" defer></script>
 </head>
 <body>
     <div class="page-shell">
@@ -28,9 +29,18 @@
             </div>
         </header>
         <main class="page-content">
-            <p class="page-kicker">03 / Watch</p>
+           
             <h1 class="page-title">Anime</h1>
-            <p class="page-intro">This page is ready for your anime picks, reviews, or watchlist.</p>
+               <p class="page-intro">This is my rating of all the anime I've watched.</p>
+            <label class="search-box">
+                <span class="visually-hidden">Search anime</span>
+                <input type="search" data-search-input aria-controls="anime-list" placeholder="Search anime" autocomplete="off">
+            </label>
+            <div class="entry-list" id="anime-list" data-search-list>
+                <p class="search-empty" data-empty-message="Anime titles will appear here once added." aria-live="polite"></p>
+            </div>
+            
+        
         </main>
     </div>
 </body>
