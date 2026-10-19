@@ -132,6 +132,171 @@ nav {
     line-height: 1.7;
 }
 
+.home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.home-actions a {
+    font-size: 13px;
+    text-underline-offset: 4px;
+}
+
+.home-action-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 0 15px;
+    background: #ffad8e;
+    color: #10191d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.home-action-copy {
+    min-height: 44px;
+    padding: 0 12px;
+    border: 1px solid rgba(239, 244, 241, 0.35);
+    background: transparent;
+    color: #eff4f1;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.home-action-secondary { color: #eff4f1; }
+
+.home-feature-kicker { margin-top: 42px; }
+
+.cv-heading { max-width: 760px; }
+
+.cv-heading .page-title { margin-bottom: 14px; }
+
+.about-page .cv-heading,
+.about-page .cv-section { font-family: "Courier New", monospace; }
+
+.about-page .cv-heading { max-width: 860px; }
+
+.about-page .cv-heading .page-kicker { color: #62e7f2; }
+
+.about-page .cv-heading .page-title {
+    margin-bottom: 12px;
+    color: #e9fbff;
+    font-family: "Courier New", monospace;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.about-page .cv-heading .page-intro { color: #c1e8f2; }
+
+.cv-layout {
+    display: grid;
+    gap: 24px;
+    margin-top: 38px;
+}
+
+.cv-section {
+    padding: 14px;
+    border: 4px solid #294c78;
+    background: #12233b;
+    box-shadow: inset 0 0 0 4px #091525, 0 8px 0 rgba(0, 0, 0, 0.32);
+}
+
+.cv-section-title {
+    margin: 0 0 14px;
+    padding: 8px 12px 10px;
+    border-bottom: 5px solid #42d9ef;
+    background: #687797;
+    color: #f3f7ff;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 1px 1px 0 #36445d;
+}
+
+.cv-skill-groups {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding: 10px;
+    border: 4px solid #294c78;
+    background: #bdeef6;
+}
+
+.cv-skill-groups > div {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(130px, 190px) minmax(0, 1fr);
+    align-items: stretch;
+    gap: 6px;
+    padding: 3px;
+    border: 3px solid #1c395b;
+    background: #e1fbff;
+}
+
+.cv-skill-groups dt {
+    display: grid;
+    place-items: center;
+    padding: 7px;
+    background: #203754;
+    color: #f2f6ff;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cv-skill-groups dd {
+    align-self: center;
+    margin: 0;
+    padding: 6px 9px;
+    color: #167ac2;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.cv-events {
+    margin: 0;
+    padding: 10px;
+    border: 4px solid #294c78;
+    background: #bdeef6;
+    list-style: none;
+}
+
+.cv-events li {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    border: 3px solid #1c395b;
+    background: #e1fbff;
+}
+
+.cv-events li + li { margin-top: 7px; }
+
+.cv-event-year {
+    display: grid;
+    min-height: 38px;
+    place-items: center;
+    background: #203754;
+    color: #f2f6ff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.cv-event-details { display: grid; gap: 3px; padding: 5px 8px; }
+
+.cv-event-name { color: #167ac2; font-size: 12px; font-weight: 700; line-height: 1.5; }
+
+.cv-event-role { color: #365b79; font-size: 10px; text-transform: uppercase; }
+
 .search-box {
     width: min(460px, 100%);
     display: block;
@@ -285,7 +450,7 @@ nav {
 .game-details {
     max-width: 760px;
     display: grid;
-    grid-template-columns: minmax(180px, 1fr) minmax(160px, 0.8fr);
+    grid-template-columns: minmax(180px, 1.35fr) minmax(160px, 0.85fr);
     align-items: center;
     gap: 20px;
 }
@@ -295,7 +460,59 @@ nav {
     aspect-ratio: 16 / 9;
     border: 1px solid rgba(239, 244, 241, 0.24);
     background-color: rgba(16, 25, 29, 0.45);
-    background-image: repeating-linear-gradient(135deg, rgba(239, 244, 241, 0.06) 0 1px, transparent 1px 10px);
+    background-image: var(--game-image, repeating-linear-gradient(135deg, rgba(239, 244, 241, 0.06) 0 1px, transparent 1px 10px));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.minecraft-showcase {
+    max-width: 100%;
+    padding: 0;
+    display: block;
+}
+
+.minecraft-art-frame {
+    width: 100%;
+    border: 1px solid rgba(239, 244, 241, 0.28);
+    background: rgba(10, 18, 22, 0.82);
+    overflow: hidden;
+}
+
+.minecraft-art-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    background: #000;
+}
+
+.minecraft-title-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 92px;
+    padding: 18px 12px 18px 0;
+}
+
+.minecraft-title-row .game-art-placeholder {
+    width: 118px;
+    height: 92px;
+    border: 1px solid rgba(239, 244, 241, 0.25);
+    flex-shrink: 0;
+    background-color: rgba(16, 25, 29, 0.5);
+}
+
+.minecraft-title-row h2 {
+    margin: 0;
+    color: #f0f5f2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 60px);
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -0.02em;
 }
 
 .creature-image {
@@ -339,6 +556,14 @@ footer span { color: #ffad8e; }
     .entry-list { margin-top: 28px; }
     .entry-name { font-size: 21px; }
     .entry-details { padding-left: 0; }
+    .cv-layout { gap: 22px; margin-top: 30px; }
+    .about-page .cv-heading .page-title { font-size: 34px; }
+    .cv-section { padding: 9px; }
+    .cv-section-title { font-size: 17px; }
+    .cv-skill-groups > div { grid-template-columns: 112px minmax(0, 1fr); }
+    .cv-skill-groups dt { font-size: 9px; }
+    .cv-skill-groups dd { padding-inline: 6px; font-size: 11px; }
+    .cv-events li { grid-template-columns: 58px minmax(0, 1fr); }
     .game-entry summary { grid-template-columns: 24px 44px minmax(0, 1fr) auto; gap: 10px; }
     .game-art-placeholder { width: 44px; height: 44px; }
     .game-details { grid-template-columns: 1fr; gap: 14px; }

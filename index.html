@@ -17,9 +17,8 @@
                 <span>EveryTachyon</span>
             </a>
             <nav aria-label="Main navigation">
-                <a href="projects.html">Projects</a>
+                <a href="projects.html">Work</a>
                 <a href="games.html">Games</a>
-                <a href="anime.html">Anime</a>
                 <a href="blog.html">Blog</a>
                 <a href="about.html">About</a>
             </nav>
@@ -31,7 +30,13 @@
         </header>
 
         <main class="page-content">
-            <p class="page-kicker">Featured project</p>
+            <p class="page-kicker">Developer · Creator · Gamer</p>
+            <div class="home-actions">
+                <a class="home-action-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=everytachyon%40gmail.com" target="_blank" rel="noreferrer">Email me <span aria-hidden="true">↗</span></a>
+                <a class="home-action-secondary" href="projects.html">See my work</a>
+            </div>
+            <span class="visually-hidden" aria-live="polite" data-copy-status></span>
+            <p class="page-kicker home-feature-kicker">Featured project</p>
             <div class="featured-project-list">
                 <details class="entry featured-project" open>
                     <summary><span class="entry-number"></span><span class="entry-name">MusicCafe</span><span class="entry-icon" aria-hidden="true"></span></summary>
@@ -47,7 +52,20 @@
             </div>
         </main>
 
-
     </div>
+    <script>
+        const copyEmailButton = document.querySelector("[data-copy-email]");
+        const copyEmailStatus = document.querySelector("[data-copy-status]");
+
+        copyEmailButton.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText("everytachyon@gmail.com");
+                copyEmailStatus.textContent = "Email address copied";
+                copyEmailButton.textContent = "Copied";
+            } catch {
+                copyEmailStatus.textContent = "Could not copy email address";
+            }
+        });
+    </script>
 </body>
 </html>

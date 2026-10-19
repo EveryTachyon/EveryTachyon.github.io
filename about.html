@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#10191d">
+    <meta name="description" content="About EveryTachyon, technical skills, and events.">
     <title>About | EveryTachyon</title>
-    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="background.css?v=2">
 </head>
-<body>
+<body class="about-page">
     <div class="page-shell">
         <header class="topbar">
             <a class="brand" href="index.html" aria-label="EveryTachyon home">
@@ -15,9 +16,8 @@
                 <span>EveryTachyon</span>
             </a>
             <nav aria-label="Main navigation">
-                <a href="projects.html">Projects</a>
+                <a href="projects.html">Work</a>
                 <a href="games.html">Games</a>
-                <a href="anime.html">Anime</a>
                 <a href="blog.html">Blog</a>
                 <a href="about.html" aria-current="page">About</a>
             </nav>
@@ -28,9 +28,40 @@
             </div>
         </header>
         <main class="page-content">
-            
-            <h1 class="page-title">About</h1>
-           
+            <div class="cv-heading">
+                <p class="page-kicker">Software Developer</p>
+                <h1 class="page-title">About</h1>
+                <p class="page-intro">I build stuff</p>
+            </div>
+            <div class="cv-layout">
+                <section class="cv-section" aria-labelledby="skills-title">
+                    <h2 class="cv-section-title" id="skills-title">Skills</h2>
+                    <dl class="cv-skill-groups">
+                        <div><dt>Programming Languages</dt><dd>C# · TypeScript · JavaScript · Kotlin · Python · Java · PHP · HTML5 · CSS</dd></div>
+                        <div><dt>Frontend</dt><dd>React · Next.js · Jetpack Compose · Material 3</dd></div>
+                        <div><dt>Backend</dt><dd>ASP.NET Core · .NET · Node.js · NestJS · Medusa.js</dd></div>
+                        <div><dt>Databases</dt><dd>PostgreSQL · MySQL · Redis · SQL</dd></div>
+                        <div><dt>Android</dt><dd>Android SDK · Gradle</dd></div>
+                        <div><dt>DevOps &amp; Cloud</dt><dd>Docker · GitHub Actions · CI/CD · Linux · Nginx · Microsoft Azure</dd></div>
+                        <div><dt>Testing</dt><dd>Unit · Integration · API</dd></div>
+                        <div><dt>Integrations</dt><dd>Stripe · Meilisearch · Webhooks</dd></div>
+                        <div><dt>Tools</dt><dd>Git · GitHub · Jira · Postman · Visual Studio · VS Code · Android Studio · Google Apps Script</dd></div>
+                    </dl>
+                </section>
+                <section class="cv-section" aria-labelledby="events-title">
+                    <h2 class="cv-section-title" id="events-title">Events</h2>
+                    <ul class="cv-events">
+                        <li>
+                            <span class="cv-event-year">2025</span>
+                            <span class="cv-event-details"><span class="cv-event-name">EU Cyber Security Hackathon</span><span class="cv-event-role">Participant</span></span>
+                        </li>
+                        <li>
+                            <span class="cv-event-year">2024</span>
+                            <span class="cv-event-details"><span class="cv-event-name">EU Cyber Security Hackathon</span><span class="cv-event-role">Participant</span></span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </main>
     </div>
 </body>
